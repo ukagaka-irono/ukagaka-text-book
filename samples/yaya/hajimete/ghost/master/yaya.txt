@@ -1,0 +1,22 @@
+// yaya.txt : basic settings for "Hajimete no Ghost" (YAYA version)
+// Keep this file ASCII only.
+
+// character set of dictionaries, output and save file
+charset, UTF-8
+
+// system dictionary (yaya_base folder from yaya-dic). Must come first.
+dicdir, yaya_base
+
+// ghost dictionaries (chapter 10)
+dic, dic_boot.dic
+dic, dic_talk.dic
+
+// ghost dictionaries (chapter 11)
+dic, dic_mouse.dic
+dic, dic_time.dic
+dic, dic_menu.dic
+
+// execution log (remove "//" while debugging, put it back before release)
+// log, yaya.log
+// iolog.filter.keyword, OnSecondChange
+// iolog.filter.keyword, OnMouse

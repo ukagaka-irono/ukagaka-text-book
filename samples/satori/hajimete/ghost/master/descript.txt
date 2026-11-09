@@ -1,0 +1,9 @@
+charset,UTF-8
+type,ghost
+name,はじめてのゴースト
+sakura.name,ことね
+kero.name,ぴーすけ
+craftman,yourname
+craftmanw,あなたの名前
+shiori,satori.dll
+readme.charset,UTF-8

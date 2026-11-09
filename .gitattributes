@@ -1,0 +1,4 @@
+* text=auto
+# SSP (Windows) で読むサンプルは CRLF のまま保つ
+samples/**/*.txt text eol=crlf
+samples/**/*.dic text eol=crlf

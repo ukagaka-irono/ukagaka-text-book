@@ -1,0 +1,68 @@
+//==============================================================
+// dic_menu.dic  メニュー（選択肢）とトーク間隔の設定
+//   はじめてのゴースト（YAYA 版） 第11章
+//==============================================================
+
+// ことねをダブルクリックしたときに出すメニュー
+メニュー
+{
+	"\1\s[10]\0\s[0]なにかご用？\n\n/
+	\q[おしゃべりして,menu_talk]\n/
+	\q[トークの間隔を変える,menu_interval]\n/
+	\q[なでてもらった回数,menu_count]\n/
+	\q[なんでもない,menu_cancel]\e"
+}
+
+// トーク間隔を選ぶメニュー
+間隔メニュー
+{
+	"\0\s[0]"
+	--
+	if aitalkinterval > 0 {
+		"いまは%(aitalkinterval)秒ごとにお話ししてるよ。"
+	}
+	else {
+		"いまはお話しをお休みしてるよ。"
+	}
+	--
+	"\n\n/
+	\q[1分ごと,interval_60]\n/
+	\q[3分ごと,interval_180]\n/
+	\q[10分ごと,interval_600]\n/
+	\q[しばらく静かにして,interval_0]\e"
+}
+
+// 選択肢が選ばれた（reference[0] に選択肢の ID が入る）
+OnChoiceSelect
+{
+	case reference[0] {
+		when "menu_talk" {
+			OnAiTalk
+		}
+		when "menu_interval" {
+			間隔メニュー
+		}
+		when "menu_count" {
+			"\0\s[0]ユーザーさんになでてもらったのは、ぜんぶで%(なで合計)回だよ。\e"
+		}
+		when "interval_60" {
+			aitalkinterval = 60
+			"\0\s[5]じゃあ、1分ごとにお話しするね。\e"
+		}
+		when "interval_180" {
+			aitalkinterval = 180
+			"\0\s[5]3分ごとにお話しするね。\e"
+		}
+		when "interval_600" {
+			aitalkinterval = 600
+			"\0\s[0]10分ごとにしておくね。\e"
+		}
+		when "interval_0" {
+			aitalkinterval = 0
+			"\0\s[0]……しばらく静かにしてるね。\w9\1\s[10]用があったら呼ぶぴ。\e"
+		}
+		others {
+			"\0\s[0]はーい。\e"
+		}
+	}
+}
