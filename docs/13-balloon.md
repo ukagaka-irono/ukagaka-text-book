@@ -69,7 +69,7 @@ font.color.b,0
 | `arrow0.x` など | スクロール矢印の位置 |
 | `homeurl` | SSP でのネットワーク更新用 URL |
 
-バルーンの `descript.txt` は、ゴーストやシェルのものより設定項目がずっと多いのが特徴です。座標の細かい決まりは UKADOC の [Balloon設定](https://ukatech.shillest.net/ukadoc-spec/descript/balloon/) を見てください。`balloons0s.txt` のように、画像ごとに設定の一部だけを上書きするファイルも置けます（名前の最後の `s` に注意）。
+バルーンの `descript.txt` は、ゴーストやシェルのものより設定項目がずっと多いのが特徴です。座標の細かい決まりは UKADOC の [Balloon設定](https://ukatech.shillest.net/ukadoc-spec/descript_balloon.html) を見てください。`balloons0s.txt` のように、画像ごとに設定の一部だけを上書きするファイルも置けます（名前の最後の `s` に注意）。
 
 ## ゴーストの側からバルーンを指定する
 

@@ -4,3 +4,7 @@
 ＊初期化
 ＄喋り間隔＝120
 ＄喋り間隔誤差＝20
+
+＃ 第18章：SSP の内蔵モジュールを SAORI として登録
+＠SAORI
+さいころ,saori/internal_random.dll,Number

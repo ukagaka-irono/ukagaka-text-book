@@ -1,6 +1,6 @@
 # はじめてのゴースト（里々版）サンプル
 
-[第8章 里々入門](../../../docs/08-satori-basics.md) と [第9章 里々実践](../../../docs/09-satori-practice.md) で作る辞書の完成形です。
+[第8章 里々入門](../../../docs/08-satori-basics.md) と [第9章 里々実践](../../../docs/09-satori-practice.md) で作る辞書の完成形です。[第17章 日付と記憶で会話を広げる](../../../docs/17-days-and-memory.md) と [第18章 外の世界とつながる](../../../docs/18-connect.md) で書き足す部分も入っています。
 
 ## 同梱していないもの
 
@@ -22,11 +22,13 @@ hajimete/
   ghost/
     master/
       descript.txt       … ゴーストの設定（shiori,satori.dll を指定）
-      satori_conf.txt    … 里々の初期設定（＊初期化）
+      satori_conf.txt    … 里々の初期設定（＊初期化）と SAORI の登録（第18章）
       dic_talk.txt       … ランダムトーク（第8章）
-      dic_boot.txt       … 起動・終了・時報（第9章）
+      dic_boot.txt       … 起動・終了・時報（第9章・第18章）
       dic_mouse.txt      … つつかれ・なでられ（第9章）
-      dic_menu.txt       … メニュー・入力ボックス（第9章）
+      dic_menu.txt       … メニュー・入力ボックス（第9章・第17章・第18章）
+      dic_days.txt       … 曜日・季節・記念日・誕生日・続きもの・話しかけの返事（第17章）
+      dic_connect.txt    … SSTP のイベント・ほかのゴースト・SAORI（第18章）
       satori.dll         … ★自分で置く
   shell/
     master/              … ★自分で用意する
@@ -58,5 +60,6 @@ hajimete/
 
 ## 動作の前提
 
-- ベースウェアは SSP を前提にしています。時報（`OnHourTimeSignal`）と、入力ボックスの ID を `On` で始めてイベントを直接呼ぶ書き方は、SSP の機能です。
+- ベースウェアは SSP を前提にしています。時報（`OnHourTimeSignal`）、入力ボックスの ID を `On` で始めてイベントを直接呼ぶ書き方、誕生日の入力に使うスライダーの入力ボックス（`\![open,sliderinput,…]`）は、SSP の機能です。
+- 第18章のさいころは、SSP 2.9.13 以降の内蔵モジュール `internal_random` を SAORI として呼び出します。里々は Mc205-1 以降が必要です。
 - 当たり判定の名前（`Head`・`Face`）は、使うシェルの `surfaces.txt` に合わせて書き換えてください。

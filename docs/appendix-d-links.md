@@ -43,6 +43,7 @@ SSP の公式ヘルプです。SSP の使い方と、開発者用機能の説明
 | 開発者向けヘルプ：開発用パレット | <https://ukatech.shillest.net/ukadoc-ssp/dev/palette/> | 第14章 |
 | 開発者向けヘルプ：開発よくある質問 | <https://ukatech.shillest.net/ukadoc-ssp/dev/faq/> | 第14章 |
 | 開発者向けヘルプ：開発リンク集（SHIORI やツールの配布元の紹介） | <https://ukatech.shillest.net/ukadoc-ssp/dev/links/> | 第4章以降 |
+| 本体設定：接続(2)（SSTP の設定） | <https://ukatech.shillest.net/ukadoc-ssp/config/conn2/> | 第18章 |
 
 SSP 本体の最新版の入手先は、「SSPの基本情報」のページに載っています。
 
@@ -52,23 +53,26 @@ UKADOC は、SSP を中心とした伺かの公式仕様をまとめた資料で
 
 | ページ | URL | この本の関連章 |
 | --- | --- | --- |
-| ファイル構成：全体の構成 | <https://ukatech.shillest.net/ukadoc-spec/manual/directory/> | 第4章 |
-| ファイル構成：ゴースト | <https://ukatech.shillest.net/ukadoc-spec/manual/ghost/> | 第4章 |
-| ファイル構成：シェル | <https://ukatech.shillest.net/ukadoc-spec/manual/shell/> | 第12章 |
-| ファイル構成：インストール | <https://ukatech.shillest.net/ukadoc-spec/manual/install/> | 第15章 |
-| ファイル構成：ネットワーク更新 | <https://ukatech.shillest.net/ukadoc-spec/manual/update/> | 第15章 |
-| descript.txt（ゴーストの設定） | <https://ukatech.shillest.net/ukadoc-spec/descript/ghost/> | 第5章 |
-| descript.txt（シェルの設定） | <https://ukatech.shillest.net/ukadoc-spec/descript/shell/> | 第12章 |
-| surfaces.txt | <https://ukatech.shillest.net/ukadoc-spec/descript/shell-surfaces/> | 第12章 |
-| descript.txt（バルーンの設定） | <https://ukatech.shillest.net/ukadoc-spec/descript/balloon/> | 第13章 |
-| install.txt・developer_options.txt など | <https://ukatech.shillest.net/ukadoc-spec/descript/install/> | 第15章 |
-| さくらスクリプトリスト | <https://ukatech.shillest.net/ukadoc-spec/list/sakura-script/> | 第6章、付録A |
-| SHIORI Eventリスト | <https://ukatech.shillest.net/ukadoc-spec/list/shiori-event/> | 第7章、付録B |
-| SHIORI/3.0（SHIORI とベースウェアの通信の仕様） | <https://ukatech.shillest.net/ukadoc-spec/spec/shiori3/> | 第7章 |
-| PLUGIN/2.0（プラグインの仕様） | <https://ukatech.shillest.net/ukadoc-spec/spec/plugin/> | 第3章 |
-| 開発ガイド：シェルの作成 | <https://ukatech.shillest.net/ukadoc-spec/dev/shell/> | 第12章 |
-| 開発ガイド：配布用ファイルの作成 | <https://ukatech.shillest.net/ukadoc-spec/dev/nar/> | 第15章 |
-| メモ（ベースウェアの機能比較など） | <https://ukatech.shillest.net/ukadoc-spec/memo/memo/> | 第1章 |
+| ファイル構成：全体の構成 | <https://ukatech.shillest.net/ukadoc-spec/manual_directory.html> | 第4章 |
+| ファイル構成：ゴースト | <https://ukatech.shillest.net/ukadoc-spec/manual_ghost.html> | 第4章 |
+| ファイル構成：シェル | <https://ukatech.shillest.net/ukadoc-spec/manual_shell.html> | 第12章 |
+| ファイル構成：インストール | <https://ukatech.shillest.net/ukadoc-spec/manual_install.html> | 第15章 |
+| ファイル構成：ネットワーク更新 | <https://ukatech.shillest.net/ukadoc-spec/manual_update.html> | 第15章 |
+| descript.txt（ゴーストの設定） | <https://ukatech.shillest.net/ukadoc-spec/descript_ghost.html> | 第5章 |
+| descript.txt（シェルの設定） | <https://ukatech.shillest.net/ukadoc-spec/descript_shell.html> | 第12章 |
+| surfaces.txt | <https://ukatech.shillest.net/ukadoc-spec/descript_shell_surfaces.html> | 第12章 |
+| descript.txt（バルーンの設定） | <https://ukatech.shillest.net/ukadoc-spec/descript_balloon.html> | 第13章 |
+| install.txt・developer_options.txt など | <https://ukatech.shillest.net/ukadoc-spec/descript_install.html> | 第15章 |
+| さくらスクリプトリスト | <https://ukatech.shillest.net/ukadoc-spec/list_sakura_script.html> | 第6章、付録A |
+| SHIORI Eventリスト | <https://ukatech.shillest.net/ukadoc-spec/list_shiori_event.html> | 第7章、付録B |
+| SHIORI/3.0（SHIORI とベースウェアの通信の仕様） | <https://ukatech.shillest.net/ukadoc-spec/spec_shiori3.html> | 第7章 |
+| PLUGIN/2.0（プラグインの仕様） | <https://ukatech.shillest.net/ukadoc-spec/spec_plugin.html> | 第3章、第18章 |
+| SSTP（外からゴーストに話させる仕様） | <https://ukatech.shillest.net/ukadoc-spec/spec_sstp.html> | 第18章 |
+| SAORI over DirectSSTP（SSP の内蔵モジュール） | <https://ukatech.shillest.net/ukadoc-spec/spec_saori_ex.html> | 第18章 |
+| SHIORI Eventリスト（外部）（プラグインやアプリから届くイベント） | <https://ukatech.shillest.net/ukadoc-spec/list_shiori_event_ex.html> | 第18章 |
+| 開発ガイド：シェルの作成 | <https://ukatech.shillest.net/ukadoc-spec/dev_shell.html> | 第12章 |
+| 開発ガイド：配布用ファイルの作成 | <https://ukatech.shillest.net/ukadoc-spec/dev_nar.html> | 第15章 |
+| メモ（ベースウェアの機能比較など） | <https://ukatech.shillest.net/ukadoc-spec/memo.html> | 第1章 |
 
 > **コラム：UKADOC の読み方**
 > さくらスクリプトリストや SHIORI Eventリストは、とても長い一覧です。ブラウザのページ内検索（Ctrl+F）で、タグ名（`\s` など）やイベント名（`OnBoot` など）を探すのが早道です。各項目の「対応」欄に `SSP` があれば、SSP で使えます。
@@ -84,6 +88,7 @@ UKADOC は、SSP を中心とした伺かの公式仕様をまとめた資料で
 | チートシート（書き方の早見表） | <https://ukatech.github.io/satori-docs/startup/cheatsheet/> |
 | 文と単語群 | <https://ukatech.github.io/satori-docs/grammar/02-talks-and-words/> |
 | ランダムトークとタイマ | <https://ukatech.github.io/satori-docs/shiori/random-talk/> |
+| SAORI の呼び出し | <https://ukatech.github.io/satori-docs/other/saori/> |
 
 ## YAYA
 
@@ -97,6 +102,8 @@ C 言語に似た書き方の SHIORI です。第4部（第10〜11章）で使�
 | チュートリアル3: 変数を使ってみよう | <https://yaya-shiori.github.io/yaya-docs/startup/tutorial-03-variables/> |
 | チートシート（書き方の早見表） | <https://yaya-shiori.github.io/yaya-docs/startup/cheatsheet/> |
 | 里々からの移行 | <https://yaya-shiori.github.io/yaya-docs/startup/migration-from-satolili/> |
+| FUNCTIONEX（SAORI の呼び出し） | <https://yaya-shiori.github.io/yaya-docs/functions/FUNCTIONEX/> |
+| SAORIの使い方 | <https://yaya-shiori.github.io/yaya-docs/tips/saori-usage/> |
 
 ---
 

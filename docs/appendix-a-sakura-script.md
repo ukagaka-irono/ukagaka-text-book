@@ -80,7 +80,12 @@
 | `\![notify,イベント名,r0,...]` | イベントを起こす（返事は使われない） | SSP | `\![notify,OnMemo]` |
 | `\![timerraise,ミリ秒,繰り返し,イベント名,...]` | 指定時間後にイベントを起こす（繰り返しは 0 で繰り返す、1 以上で 1 回） | SSP | `\![timerraise,5000,1,OnLater]` |
 | `\![embed,イベント名,r0,...]` | イベントの返事を、その場に埋め込んで続ける | SSP など | `\![embed,OnPart]` |
+| `\![raiseother,ゴースト名,イベント名,r0,...]` | 起動中のほかのゴーストにイベントを送る（`__SYSTEM_ALL_GHOST__` で全員）。失敗すると `OnRaiseOtherFailure` | SSP など | `\![raiseother,ともだちのゴースト,OnHajimeteGreeting]` |
+| `\![notifyother,ゴースト名,イベント名,r0,...]` | `raiseother` と同じだが、相手の返事は話されない | SSP | `\![notifyother,ともだちのゴースト,OnHajimeteGreeting]` |
+| `\![set,otherghosttalk,値]` | `OnOtherGhostTalk` を受け取るかどうか（`true`・`before`・`false`）。ゴーストの終了まで有効 | SSP など | `\![set,otherghosttalk,true]` |
+| `\![raiseplugin,プラグイン,イベント名,r0,...]` | プラグインにイベントを送る（プラグインは ID か名前で指定）。返事のいらない `notifyplugin` もある | SSP | — |
 | `\![open,inputbox,ID,表示時間,初期文字]` | 文字入力の箱を開く。決定で `OnUserInput`（ID が `On` 始まりならその名前）が起きる | | `\![open,inputbox,OnName,0]` |
+| `\![open,sliderinput,ID,表示時間,現在値,最小,最大]` | つまみを動かして数を選ぶ入力の箱を開く。ID の扱いは `inputbox` と同じ | SSP | `\![open,sliderinput,OnMonth,0,1,1,12]` |
 | `\![open,browser,URL]` | ブラウザで URL を開く | | `\![open,browser,https://example.com/]` |
 | `\![change,ghost,ゴースト名]` | 指定したゴーストに交代する | | `\![change,ghost,random]` |
 | `\![call,ghost,ゴースト名]` | 指定したゴーストを呼んで、同時に立たせる | SSP など | `\![call,ghost,random]` |
@@ -108,4 +113,4 @@
 
 ---
 
-[← 前の章](15-distribute.md) ｜ [目次](../README.md) ｜ [次の章 →](appendix-b-events.md)
+[← 前の章](18-connect.md) ｜ [目次](../README.md) ｜ [次の章 →](appendix-b-events.md)

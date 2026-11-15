@@ -16,6 +16,12 @@ dic, dic_mouse.dic
 dic, dic_time.dic
 dic, dic_menu.dic
 
+// ghost dictionaries (chapter 17)
+dic, dic_days.dic
+
+// ghost dictionaries (chapter 18)
+dic, dic_connect.dic
+
 // execution log (remove "//" while debugging, put it back before release)
 // log, yaya.log
 // iolog.filter.keyword, OnSecondChange
