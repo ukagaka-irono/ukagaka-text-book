@@ -43,7 +43,7 @@ YAYA では、関数はどの辞書ファイルに書いてもかまいません
 
 イベントには、`Reference0`・`Reference1`…という追加の情報がついてきます。YAYA では、これを **`reference[0]`・`reference[1]`…** という配列の変数で読みます。システム辞書が、イベントのたびに中身を入れ替えてくれます。
 
-何番に何が入るかはイベントごとに違うので、[UKADOC の SHIORI Event リスト](https://ukatech.shillest.net/ukadoc-spec/list/shiori-event/) や付録B で確かめてください。たとえば `OnFirstBoot` では、`reference[0]` にこれまでに消去（vanish）された回数が入ります。
+何番に何が入るかはイベントごとに違うので、[UKADOC の SHIORI Event リスト](https://ukatech.shillest.net/ukadoc-spec/list_shiori_event.html) や付録B で確かめてください。たとえば `OnFirstBoot` では、`reference[0]` にこれまでに消去（vanish）された回数が入ります。
 
 ### 起動・終了をととのえる
 

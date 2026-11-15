@@ -1,6 +1,6 @@
 # はじめてのゴースト（YAYA 版）サンプル
 
-[第10章 YAYA 入門](../../../docs/10-yaya-basics.md) と [第11章 YAYA 実践](../../../docs/11-yaya-practice.md) で作る辞書の完成形です。
+[第10章 YAYA 入門](../../../docs/10-yaya-basics.md) と [第11章 YAYA 実践](../../../docs/11-yaya-practice.md) で作る辞書の完成形です。[第17章 日付と記憶で会話を広げる](../../../docs/17-days-and-memory.md) と [第18章 外の世界とつながる](../../../docs/18-connect.md) で書き足す部分も入っています。
 
 ## 同梱しているもの
 
@@ -12,11 +12,13 @@ hajimete/
     └─ master/
         ├─ descript.txt  … ゴーストの基本設定（shiori,yaya.dll）
         ├─ yaya.txt      … YAYA の基礎設定ファイル
-        ├─ dic_boot.dic  … 起動・終了（第10章・第11章）
-        ├─ dic_talk.dic  … ランダムトーク（第10章・第11章）
+        ├─ dic_boot.dic  … 起動・終了（第10章・第11章・第18章）
+        ├─ dic_talk.dic  … ランダムトーク（第10章・第11章・第17章）
         ├─ dic_mouse.dic … つつかれ・なでられ（第11章）
         ├─ dic_time.dic  … 時報（第11章）
-        └─ dic_menu.dic  … メニューとトーク間隔（第11章）
+        ├─ dic_menu.dic  … メニューとトーク間隔（第11章・第17章・第18章）
+        ├─ dic_days.dic  … 曜日・記念日・誕生日・続きもの・話しかけの返事（第17章）
+        └─ dic_connect.dic … SSTP のイベント・ほかのゴースト・SAORI（第18章）
 ```
 
 文字コードはすべて **UTF-8（BOM なし）**、改行は CRLF です。`yaya.txt` は `charset, UTF-8` を指定しており、ファイル自体は半角英数字（ASCII）だけで書いてあります。`descript.txt`・`install.txt`・`readme.txt` の 1 行目には `charset,UTF-8` を書いてあります。
@@ -56,6 +58,7 @@ ghost/master/
 > **注意**
 > - `yaya.dll` とシステム辞書は、できるだけ新しいもの同士を組み合わせてください。システム辞書の説明でも、更新するときは `yaya.dll` も同時に更新するようすすめられています。
 > - 里々版のサンプル（`samples/satori/hajimete/`）も同じフォルダ名 `hajimete` を使っています。同じ SSP に両方入れるときは、どちらかのフォルダ名と `install.txt` の `directory` を変えてください。
+> - 第18章のさいころは、SSP 2.9.13 以降の内蔵モジュール `internal_random` を呼び出します。使えない環境では「さいころが見つからない」と話します。
 > - 起動すると `ghost/master/yaya_variable.cfg`（変数のセーブファイル）ができます。配布するときは消してください。
 
 ## 当たり判定の名前

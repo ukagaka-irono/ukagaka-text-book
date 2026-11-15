@@ -44,8 +44,8 @@ SSP から SHIORI に届く主なイベントを、種類ごとに表にまと�
 
 | イベント | いつ来るか | 主な Reference |
 | --- | --- | --- |
-| `OnSecondChange` | 1 秒ごと。話せないときは通知で届く | 3：話せるなら `1`、話せないなら `0`、4（SSP）：パソコンが操作されていない秒数 |
-| `OnMinuteChange` | 1 分ごと。話せないときは通知で届く | 同上 |
+| `OnSecondChange` | 1 秒ごと。話せないときは通知で届く | 1：見切れていれば `1`、2：重なっていれば `1`、3：話せるなら `1`、話せないなら `0`、4（SSP）：パソコンが操作されていない秒数 |
+| `OnMinuteChange` | 1 分ごと。話せないときは通知で届く。記念日の確認などに使う（第17章） | 同上 |
 | `OnHourTimeSignal` | 毎正時（SSP）。話せるようになるまで待って届く | 4：パソコンが操作されていない秒数 |
 | `OnAITalk` | `\a` タグなどで「ランダムトークを話して」と求められたとき（SSP） | なし |
 
@@ -76,6 +76,26 @@ SSP から SHIORI に届く主なイベントを、種類ごとに表にまと�
 | `OnVanishSelected` | 確認で「はい」が選ばれたとき | なし |
 | `OnVanishCancel` | 確認で「いいえ」が選ばれたとき | なし |
 | `OnVanished` | 前のゴーストが消滅して、自分に交代してきたとき。SSP では、返事がないと続けて `OnBoot` が起きる | 0：消滅したゴーストの \0 側の名前 |
+
+## ほかのゴースト（第18章）
+
+| イベント | いつ来るか | 主な Reference |
+| --- | --- | --- |
+| `OnOtherGhostBooted` | ほかのゴーストが起動したとき（SSP など） | 0：\0 側の名前、1：起動時のスクリプト、2：ゴースト名 |
+| `OnOtherGhostClosed` | 同時に起動していたほかのゴーストが終了したとき（SSP など） | 0：\0 側の名前、1：最後のスクリプト、2：ゴースト名 |
+| `OnOtherGhostChanged` | ほかのゴーストどうしが切り替わったとき（SSP など） | 0：切り替え前の \0 側の名前、1：切り替え後の \0 側の名前 |
+| `OnOtherGhostTalk` | ほかのゴーストが話したとき。`\![set,otherghosttalk,true]` を実行するまで届かない（SSP など） | 0：ゴースト名、1：\0 側の名前、2：発言の種類（`sstp-send`、`break` など）、3：イベント名、4：スクリプト |
+| `OnRaiseOtherFailure` / `OnNotifyOtherFailure` | `\![raiseother]` / `\![notifyother]` で送れなかったとき（SSP） | 0：理由（`notfound`、`timecritical`、`minimized` など）、1：送り先、2：イベント名 |
+
+## プラグインとヘッドライン（第18章）
+
+| イベント | いつ来るか | 主な Reference |
+| --- | --- | --- |
+| `OnRaisePluginFailure` | `\![raiseplugin]` で送れなかったとき（SSP） | 0：理由（`notfound`、`disabled` など） |
+| `OnHeadlinesenseBegin` | ヘッドラインの読み込みを始めるとき。SSP では、RSS のときは先に `OnRSSBegin` が届く | 0：サイト名、1：URL |
+| `OnHeadlinesense.OnFind` | 読み上げる内容が見つかったとき | 0：サイト名、1：URL、2：ページ（`First`・`Next`・`Last`・`First and Last`）、3：内容 |
+| `OnHeadlinesenseComplete` | 取得できたが、更新がなかったとき | 0：`no update` |
+| `OnHeadlinesenseFailure` | 取得に失敗したとき。SSP では、RSS のときは先に `OnRSSFailure` が届く | 0：理由（`can't download`、`can't analyze`） |
 
 ## そのほか
 

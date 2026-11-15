@@ -1,13 +1,20 @@
 //==============================================================
 // dic_menu.dic  メニュー（選択肢）とトーク間隔の設定
-//   はじめてのゴースト（YAYA 版） 第11章
+//   はじめてのゴースト（YAYA 版） 第11章・第17章・第18章
 //==============================================================
 
 // ことねをダブルクリックしたときに出すメニュー
+//   第17章で「話しかける」「誕生日を教える」を追加。
+//   第18章で「ともだちにあいさつ」「さいころをふる」を追加（関数は dic_connect.dic）。
+//   ID が On で始まる選択肢は、OnChoiceSelect ではなく、その名前のイベントになる（dic_days.dic）
 メニュー
 {
 	"\1\s[10]\0\s[0]なにかご用？\n\n/
 	\q[おしゃべりして,menu_talk]\n/
+	\q[話しかける,OnHajimeteTalk]\n/
+	\q[誕生日を教える,OnHajimeteBirthday]\n/
+	\q[ともだちにあいさつ,menu_greet]\n/
+	\q[さいころをふる,menu_dice]\n/
 	\q[トークの間隔を変える,menu_interval]\n/
 	\q[なでてもらった回数,menu_count]\n/
 	\q[なんでもない,menu_cancel]\e"
@@ -38,6 +45,12 @@ OnChoiceSelect
 	case reference[0] {
 		when "menu_talk" {
 			OnAiTalk
+		}
+		when "menu_greet" {
+			ともだちにあいさつ
+		}
+		when "menu_dice" {
+			さいころをふる
 		}
 		when "menu_interval" {
 			間隔メニュー

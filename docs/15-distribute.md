@@ -160,7 +160,7 @@ SSP では、`install.txt` を置いた状態でドロップし、`updates2.dau`
 - 古い版のゴーストを手元に残しておき、アップロード後に実際にネットワーク更新して、正常に終わるか確かめます。
 - 開発中のゴーストでは、開発用パレットの「自動更新無効」や「更新チェックのみ」を使うと、作業中のファイルを上書きする事故を防げます（第14章）。
 
-なお、nar 作成から更新ファイル作成・アップロードまでを一括で行う支援ツールとして「ゴースト配布系自動化システム（GDM）」もあります。UKADOC の [配布用ファイルの作成](https://ukatech.shillest.net/ukadoc-spec/dev/nar/) から案内をたどれます。
+なお、nar 作成から更新ファイル作成・アップロードまでを一括で行う支援ツールとして「ゴースト配布系自動化システム（GDM）」もあります。UKADOC の [配布用ファイルの作成](https://ukatech.shillest.net/ukadoc-spec/dev_nar.html) から案内をたどれます。
 
 ## 配布先と readme
 
@@ -241,4 +241,4 @@ SSP では、`readme.txt` の代わりに Markdown 形式の `readme.md` も使�
 
 ---
 
-[← 前の章](14-debug.md) ｜ [目次](../README.md) ｜ [次の章 →](appendix-a-sakura-script.md)
+[← 前の章](14-debug.md) ｜ [目次](../README.md) ｜ [次の章 →](16-character-and-talk.md)
